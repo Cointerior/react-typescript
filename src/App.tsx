@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, useRef, MouseEvent, KeyboardEvent } from 'react' 
+import Counter from './components/counter'
 
 interface User {
   id: number,
@@ -35,12 +36,16 @@ function App() {
   const result = useMemo<number>(() => fib(myNum),[myNum])
 
   return (
-    <div className="App">
-      <h1>{count}</h1>
-      <button onClick={addTwo}>Add</button>
-      <h2>{result}</h2>
-      <input ref={inputRef} type="text" />
-    </div>
+
+    <>
+      <Counter>{(num: number) => <>Current Count: {num}</>}</Counter>
+    </>
+    // <div className="App">
+    //   <h1>{count}</h1>
+    //   <button onClick={addTwo}>Add</button>
+    //   <h2>{result}</h2>
+    //   <input ref={inputRef} type="text" />
+    // </div>
   )
 }
 
