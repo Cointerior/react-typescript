@@ -6,7 +6,7 @@ type CountProp = {
 }
 
 const Counter = ({ children, setCount }: CountProp) => {
-    
+     
     
     return (
         <div>
